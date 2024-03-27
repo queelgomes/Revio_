@@ -13,3 +13,5 @@ SELECT id, name FROM movies WHERE id_prices in (SELECT id FROM prices WHERE valu
 -- Quantidades Entre 10 e 20
 SELECT name FROM product WHERE amount BETWEEN 10 AND 20 AND id_providers in (SELECT id FROM providers WHERE name LIKE "P%")
 
+-- Representantes Executivos
+SELECT prod.name, prov.name FROM products as prod, providers as prov WHERE prod.id_providers = prov.id AND prod.id_categories = 6
